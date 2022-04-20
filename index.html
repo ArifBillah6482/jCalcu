@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+        .input{
+            width: 260px;
+            text-align: end;
+            padding: 5px 10px;
+            margin: 10px 0;
+            font-size: 35px;
+            font-weight: bold;
+            letter-spacing: 1.5px;
+        }
+        .numbers{
+            background-color: rgb(152, 62, 255);
+            border: 1px dashed black;
+            padding: 10px;
+        }
+        .numbers > .number > button{
+            width: 55px;
+            height: 55px;
+            font-weight: bolder;
+            font-size: 25px;
+            
+        }
+        .numbers > .number > button:hover{
+            background-color: rgb(172, 71, 255);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <h2>Calculator</h2>
+        <div class="inputNumber">
+            <input class="input" autofocus type="text" placeholder="0" required>
+        </div>
+        <div class="numbers">
+            <div class="number">
+                <button onclick="insertNumber(1)" class="Btn">1</button>
+                <button onclick="insertNumber(2)"  class="Btn">2</button>
+                <button  onclick="insertNumber(3)" class="Btn">3</button>
+                <button  onclick="insertSymbol('+')" class="Btn-Symbol">+</button>
+            </div>
+            <div class="number">
+                <button onclick="insertNumber(4)"  class="Btn">4</button>
+                <button onclick="insertNumber(5)"  class="Btn">5</button>
+                <button onclick="insertNumber(6)"  class="Btn">6</button>
+                <button onclick="insertSymbol('-')" class="Btn-Symbol">-</button>
+            </div>
+            <div class="number">
+                <button  onclick="insertNumber(7)" class="Btn">7</button>
+                <button  onclick="insertNumber(8)" class="Btn">8</button>
+                <button  onclick="insertNumber(9)" class="Btn">9</button>
+                <button onclick="insertSymbol('*')" class="Btn-Symbol">*</button>
+            </div>
+            <div class="number">
+                <button onclick="insertNumber(0)" >0</button>
+                <button onclick="insertNumber('00')" >00</button>
+                <button onclick="resultSymbol('=')" style="color: red;">=</button>
+      '         <button onclick="insertSymbol('/')" style="margin-left: -7px;" class="Btn-Symbol">/</button><br>
+                <button  class="dltBtn" style="width: 49%;  background-color: tomato; color: beige; letter-spacing: 2px;"  >Delete</button>
+                <button  class="clearBtn" style="width: 49%; background-color: tomato; color: beige; letter-spacing: 2px;" >Clear</button>
+            </div>
+            
+        </div>
+    </div>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./jQuery.js"></script>
+</body>
+</html>
